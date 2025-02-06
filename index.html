@@ -34,14 +34,14 @@
       const email = document.getElementById('email').value;
       
       // Envia os dados para o Google Apps Script
-      fetch('COLE_AQUI_O_URL_DA_API', {
+      fetch('https://script.google.com/macros/s/AKfycbwCe2lvQ9gVxX54Ppx24jQ6CLDqncRCXlXjbrwIG0urnVES87Br5TIE8Yl-_M9_HxLg/exec', {
         method: 'POST',
         body: JSON.stringify({ nome, email }),
         headers: { 'Content-Type': 'application/json' }
       })
         .then(response => response.json())
         .then(data => {
-          document.getElementById('codigoPagamento').innerText = `C—digo de pagamento: ${data.codigoPagamento}`;
+          document.getElementById('codigoPagamento').innerText = `Câ€”digo de pagamento: ${data.codigoPagamento}`;
         })
         .catch(error => {
           console.error('Erro:', error);
